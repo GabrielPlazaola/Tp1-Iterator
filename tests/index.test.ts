@@ -1,4 +1,4 @@
-import { Aplicacion } from '../src/index';
+import { Aplicacion } from '../src/aplicacion';
 
 var aplicacion1 = new Aplicacion
 var lista1: string[] = ["a", "b", "c", "d", "e"]
