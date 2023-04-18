@@ -1,6 +1,6 @@
 import {IIterator, Iterator, Iteratordeados} from './iteradores';
 
-export interface Aggregator {
+export interface ICollection {
     setitems(lista: string[]): void;
     // Llama a un iterador externo
     getIterator(): IIterator<string>;
@@ -11,7 +11,7 @@ export interface Aggregator {
 
 // Las colecciones concretas proveen de uno o mas metodos para llamar a iteradores compatibles
 
-export class ColeccionPalabras implements Aggregator {
+export class StringCollection implements ICollection {
     private items: string[] = [];
 
     setitems(lista: string[]): void{

@@ -1,4 +1,4 @@
-import {Aggregator, ColeccionPalabras} from './colecciones'
+import {ICollection, StringCollection} from './colecciones'
 
 export interface IIterator<T> {
     // Retorna elemento actual
@@ -20,7 +20,7 @@ export interface IIterator<T> {
 // Iterador concreto que implementa varios algoritmos de iteracion
 
 export class Iterator implements IIterator<string> {
-    private coleccion: ColeccionPalabras;
+    private coleccion: StringCollection;
 
     // Guarda la posicion actual
     private position: number = 0;
@@ -28,7 +28,7 @@ export class Iterator implements IIterator<string> {
     // Guarda la direccion transversal
     private reverse: boolean = false;
 
-    constructor(coleccion: ColeccionPalabras, reverse: boolean = false) {
+    constructor(coleccion: StringCollection, reverse: boolean = false) {
         this.coleccion = coleccion;
         this.reverse = reverse;
 
@@ -67,13 +67,13 @@ export class Iterator implements IIterator<string> {
 }
 
 export class Iteratordeados implements IIterator<string> {
-    private coleccion: ColeccionPalabras;
+    private coleccion: StringCollection;
 
     private position: number = 0;
 
     private impar: boolean = false;
 
-    constructor(coleccion: ColeccionPalabras, impar: boolean = false) {
+    constructor(coleccion: StringCollection, impar: boolean = false) {
         this.coleccion = coleccion;
         this.impar = impar;
 

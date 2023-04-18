@@ -1,12 +1,12 @@
-import {Aggregator, ColeccionPalabras} from './colecciones';
+import {ICollection, StringCollection} from './colecciones';
 import {IIterator} from './iteradores';
 
 export class Aplicacion {
-    private coleccion: Aggregator;
+    private coleccion: ICollection;
     private iterador: IIterator<string>;
 
     constructor() {
-        this.coleccion = new ColeccionPalabras;
+        this.coleccion = new StringCollection;
     }
 
     recorrer(lista: string[]) {
